@@ -1,0 +1,75 @@
+{
+  "People": [
+    {
+      "id": "people-f1-kirito",
+      "floorNumber": 1,
+      "reviewer": "Kirito",
+      "rating": 3,
+      "comment": "NPCs were helpful but felt like tutorials."
+    },
+    {
+      "id": "people-f22-gp",
+      "floorNumber": 22,
+      "reviewer": "General Player",
+      "rating": 4,
+      "comment": "Villagers are friendly and feel alive, great for roleplay."
+    }
+  ],
+  "Scenery": [
+    {
+      "id": "scenery-f2-asuna",
+      "floorNumber": 2,
+      "reviewer": "Asuna",
+      "rating": 4,
+      "comment": "The snowy landscapes were stunning."
+    },
+    {
+      "id": "scenery-f22-kirito",
+      "floorNumber": 22,
+      "reviewer": "Kirito",
+      "rating": 5,
+      "comment": "Tranquil forest and cabin vibes. Perfect retreat."
+    }
+  ],
+  "Boss": [
+    {
+      "id": "boss-f1-kirito",
+      "floorNumber": 1,
+      "reviewer": "Kirito",
+      "rating": 4,
+      "comment": "Illfang had unexpected attack patterns."
+    },
+    {
+      "id": "boss-f2-gp",
+      "floorNumber": 2,
+      "reviewer": "General Player",
+      "rating": 2,
+      "comment": "Boss was easier than mobs leading to it."
+    }
+  ],
+  "Monsters": [
+    {
+      "id": "monsters-f2-asuna",
+      "floorNumber": 2,
+      "reviewer": "Asuna",
+      "rating": 4,
+      "comment": "Aggressive wolves made traveling risky."
+    }
+  ],
+  "Leveling": [
+    {
+      "id": "leveling-f1-gp",
+      "floorNumber": 1,
+      "reviewer": "General Player",
+      "rating": 5,
+      "comment": "Lots of low-level enemies to grind quickly."
+    },
+    {
+      "id": "leveling-f22-kirito",
+      "floorNumber": 22,
+      "reviewer": "Kirito",
+      "rating": 1,
+      "comment": "Almost no XP opportunities, just peaceful living."
+    }
+  ]
+}
