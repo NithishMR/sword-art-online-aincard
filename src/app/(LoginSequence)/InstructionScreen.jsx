@@ -9,7 +9,7 @@ export default function InstructionsScreen({ onProceed }) {
 • You can also use your keyboard to type commands or names.
 • Progress is currently static (MVP), but more interaction is coming soon.
 
-Make sure you're ready — this is a one-way trip (just kidding... or is it?)`;
+Make sure you're ready — this is a one-way trip (just kidding... or is it)`;
 
   const [typed, setTyped] = useState("");
   const [done, setDone] = useState(false);
@@ -18,9 +18,10 @@ Make sure you're ready — this is a one-way trip (just kidding... or is it?)`;
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
-      setTyped((prev) => prev + fullText[i]);
-      i++;
-      if (i >= fullText.length) {
+      if (i < fullText.length) {
+        setTyped((prev) => prev + fullText.charAt(i));
+        i++;
+      } else {
         clearInterval(interval);
         setDone(true);
       }
@@ -29,16 +30,16 @@ Make sure you're ready — this is a one-way trip (just kidding... or is it?)`;
   }, []);
 
   return (
-    <div className="h-screen bg-black text-white flex flex-col justify-center items-center px-6 font-mono">
-      <div className="max-w-3xl text-center space-y-6">
-        <h1 className="text-4xl font-bold mb-4 text-cyan-300 drop-shadow-[0_0_6px_#0ff]">
+    <div className="h-screen bg-black text-white flex flex-col justify-center items-center px-4 sm:px-6 font-mono">
+      <div className="w-full max-w-3xl text-center space-y-6">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-cyan-300 drop-shadow-[0_0_6px_#0ff]">
           Welcome to Sword Art Online
         </h1>
 
         {/* Typewritten text block */}
-        <pre className="text-gray-300 whitespace-pre-wrap text-left">
+        <div className="text-gray-300 whitespace-pre-wrap text-left text-sm sm:text-base px-1 sm:px-4">
           {typed}
-        </pre>
+        </div>
 
         {/* Show button only after typing is fully done */}
         {done && (

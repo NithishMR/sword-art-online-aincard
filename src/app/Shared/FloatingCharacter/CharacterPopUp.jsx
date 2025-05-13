@@ -33,7 +33,7 @@ export default function CharacterPopup() {
         // Auto-close after 5 seconds
         setTimeout(() => {
           handleClose();
-        }, 6000);
+        }, 5000);
       }
     }, 2000); // Delay show by 2 seconds
 
@@ -64,20 +64,14 @@ export default function CharacterPopup() {
           alt="Guide"
           width={70}
           height={70}
-          className="rounded-full border-2 border-white"
+          className="rounded-full border-2 border-white w-16 h-16 sm:w-20 sm:h-20"
         />
 
         {/* Speech Bubble */}
-        <div className="relative bg-black/90 text-white p-4 rounded-xl max-w-md border border-cyan-500 shadow-lg backdrop-blur-md">
-          <p className="text-sm leading-relaxed font-mono">{message}</p>
-
-          {/* OK button (still available for manual close before 5s) */}
-          {/* <button
-            onClick={handleClose}
-            className="absolute -bottom-4 right-4 w-8 h-8 rounded-full border-2 border-white text-xs font-bold flex items-center justify-center hover:bg-white hover:text-black transition"
-          >
-            OK
-          </button> */}
+        <div className="relative bg-black/90 text-white p-4 rounded-xl max-w-md w-full sm:max-w-xs md:max-w-lg border border-cyan-500 shadow-lg backdrop-blur-md">
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed font-mono">
+            {message}
+          </p>
 
           {/* Triangle */}
           <div className="absolute left-0 top-6 -translate-x-full w-0 h-0 border-t-8 border-b-8 border-r-8 border-t-transparent border-b-transparent border-r-black/90"></div>

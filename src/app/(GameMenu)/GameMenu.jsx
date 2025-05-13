@@ -57,12 +57,12 @@ export default function GameMenu() {
   };
 
   return (
-    <div className="w-screen h-screen bg-black text-white flex items-center justify-center font-sans">
-      <ul className="space-y-6 text-3xl">
+    <div className="w-screen h-screen bg-black text-white flex items-center justify-center font-sans px-4">
+      <ul className="w-full max-w-md space-y-4 sm:space-y-6 text-xl sm:text-3xl">
         {menuOptions.map((option, index) => (
           <li
             key={option}
-            className={`cursor-pointer px-6 py-3 border border-white rounded-xl ${
+            className={`cursor-pointer px-4 py-3 border border-white rounded-xl ${
               index === selectedIndex
                 ? "bg-white text-black scale-105"
                 : "opacity-70"

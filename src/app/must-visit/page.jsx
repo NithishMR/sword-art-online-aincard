@@ -116,7 +116,7 @@ export default function MustVisitPage() {
           navigate floors
         </p>
 
-        <div className="space-y-10 max-w-2xl mx-auto">
+        <div className="space-y-10 max-w-3xl mx-auto">
           {MustVisit.map((floor, index) => (
             <div
               key={floor.floorNumber}
@@ -133,14 +133,16 @@ export default function MustVisitPage() {
               <div className="space-y-6">
                 {floor.spots.map((spot, i) => (
                   <div key={i} className="flex flex-col space-y-2">
-                    <h3 className="text-lg text-indigo-300">{spot.name}</h3>
+                    <h3 className="text-lg sm:text-xl text-indigo-300">
+                      {spot.name}
+                    </h3>
                     <p className="text-sm sm:text-base text-gray-300">
                       {spot.description}
                     </p>
                     <img
                       src={spot.image}
                       alt={spot.name}
-                      className="w-full h-64 object-cover rounded-xl"
+                      className="w-full h-48 sm:h-64 object-cover rounded-xl"
                     />
                   </div>
                 ))}

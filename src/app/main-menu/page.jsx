@@ -61,12 +61,12 @@ export default function GameMenu() {
     <>
       <div className="">
         <CharacterPopup />
-        <div className="w-screen h-screen bg-black  flex items-center justify-center font-mono border-cyan-400  shadow-lg  text-cyan-300 ">
-          <ul className="space-y-6 text-3xl">
+        <div className="w-screen h-screen bg-black flex items-center justify-center font-mono border-cyan-400 shadow-lg text-cyan-300">
+          <ul className="space-y-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             {menuOptions.map((option, index) => (
               <li
                 key={option}
-                className={`cursor-pointer px-24 py-3 border border-white rounded-xl ${
+                className={`cursor-pointer px-12 py-3 border border-white rounded-xl ${
                   index === selectedIndex
                     ? "bg-white text-indigo-400 transition-all duration-200"
                     : "opacity-70"

@@ -40,46 +40,6 @@ const FloorDetailsHome = () => {
     }
   }, [selectedIndex]);
 
-  // return (
-  //   <div className="min-h-screen bg-black text-white px-6 py-10 font-mono">
-  //     <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-indigo-400">
-  //       Floors in Aincrad
-  //     </h1>
-  //     <p className="text-center text-sm text-gray-400 mb-6">
-  //       Use <span className="bg-gray-700 px-2 py-1 rounded mx-1">↑</span> and{" "}
-  //       <span className="bg-gray-700 px-2 py-1 rounded mx-1">↓</span> keys to
-  //       navigate
-  //     </p>
-
-  //     <ul className="space-y-6 max-w-2xl mx-auto">
-  //       {floorDetails.map((floor, index) => {
-  //         const href = `/floor-details/${floor.floor
-  //           .toLowerCase()
-  //           .replace(/\s+/g, "-")}`;
-  //         return (
-  //           <li
-  //             key={floor.floor}
-  //             ref={(el) => (itemRefs.current[index] = el)}
-  //             className={`p-6 border rounded-2xl cursor-pointer transition-all duration-300 ${
-  //               selectedIndex === index
-  //                 ? "border-indigo-400 bg-gray-900 shadow-lg scale-[1.03]"
-  //                 : "border-gray-700 hover:bg-gray-800"
-  //             }`}
-  //             onMouseEnter={() => setSelectedIndex(index)}
-  //             onClick={() => (window.location.href = href)}
-  //           >
-  //             <Link
-  //               href={href}
-  //               className="block text-xl sm:text-2xl font-semibold text-indigo-300"
-  //             >
-  //               {floor.floor} – {floor.theme}
-  //             </Link>
-  //           </li>
-  //         );
-  //       })}
-  //     </ul>
-  //   </div>
-  // );
   return (
     <>
       <CharacterPopup />
@@ -109,6 +69,9 @@ const FloorDetailsHome = () => {
                 }`}
                 onMouseEnter={() => setSelectedIndex(index)}
                 onClick={() => (window.location.href = href)}
+                role="button"
+                tabIndex={0}
+                aria-selected={selectedIndex === index}
               >
                 <Link
                   href={href}
